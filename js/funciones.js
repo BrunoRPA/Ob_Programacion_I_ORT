@@ -96,6 +96,8 @@ function agregarPatrocinador() {
 
         if (patrocinadorExistente) {
             patrocinadorExistente.rubro = rubro;
+            // Limpiar la lista de carreras existente y reemplazar con las nuevas
+            patrocinadorExistente.carrerasP = [];
             for (let carrera of carrerasSeleccionadas) {
                 patrocinadorExistente.asociarCarrera(carrera);
             }
@@ -235,9 +237,18 @@ function inscribir() {
         }
 
         let nuevaInscripcion = new Inscripcion(corredorInscripcion.nombreC, carreraInscripcion.nombre);
+        
+        // Calcular el número consecutivo para esta carrera
+        let numeroConsecutivo = 1;
+        for (let i = 0; i < sistema.listaInscripciones.length; i++) {
+            if (sistema.listaInscripciones[i].Icarreras === carreraInscripcion.nombre) {
+                numeroConsecutivo++;
+            }
+        }
+        nuevaInscripcion.numeroInscripcion = numeroConsecutivo;
+        
         sistema.agregarInscripcion(nuevaInscripcion);
 
-        let numeroInscripcion = sistema.listaInscripciones.length;
         formulario.reset();
         mostrarInscripciones();
     }
@@ -263,6 +274,7 @@ function mostrarInscripciones() {
     });
 
     if (corredor && carrera) {
+        mensaje += " Número de inscripción: " + insc.numeroInscripcion + "\n";
         mensaje += " Corredor: " + corredor.nombreC;
         mensaje += " Cédula: " + corredor.cedula;
         mensaje += " Edad: " + corredor.edad + "\n";

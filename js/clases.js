@@ -34,6 +34,7 @@ class Inscripcion {
     constructor(Icorredores, Icarreras) {
         this.Icorredores = Icorredores;
         this.Icarreras = Icarreras;
+        this.numeroInscripcion = 0; // Se asignará al crear la inscripción
     }
 }
 
