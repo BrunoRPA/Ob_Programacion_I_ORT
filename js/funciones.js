@@ -74,7 +74,7 @@ function agregarPatrocinador() {
     if (formulario.reportValidity()) {
         let nombreP = document.getElementById("idNombrePatrocinador").value;
         let rubro = document.getElementById("idRubro").value;
-        let carrerasSelect = document.getElementById("idDepartamentoCarreras");
+        let carrerasSelect = document.getElementById("idCarrerasAPatrocinar");
         let carrerasSeleccionadas = [];
         let opcionesSeleccionadas = carrerasSelect.options;
         for (let i = 0; i < opcionesSeleccionadas.length; i++) {
@@ -167,7 +167,7 @@ function actualizarListaCorredores() {
 }
 
 function actualizarListaCarrerasP() {
-    let select = document.getElementById("idDepartamentoCarreras");
+    let select = document.getElementById("idCarrerasAPatrocinar");
     select.innerHTML = "";
     for (let carrera of sistema.listaCarreras) {
         let option = document.createElement("option");
