@@ -1,3 +1,4 @@
+//Bruno Barcelona 348862 y Rodrigo Carrion 334254
 class Carrera {
     constructor(nombre, departamento, fecha, cupo) {
         this.nombre = nombre;

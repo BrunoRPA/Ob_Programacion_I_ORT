@@ -1,3 +1,4 @@
+//Bruno Barcelona 348862 y Rodrigo Carrion 334254
 window.addEventListener("load", inicio);
 
 let sistema = new Sistema();
