@@ -10,10 +10,12 @@
     <title>Sitio de carreras</title>
 </head>
 <body>
-    <h1>Sitio para Carreras</h1>
-    <img id="imagen"  src="img/corredores.jpeg" alt="corredoresde uruguay">
-    <input class="orden" type="button" value="Datos" id="btnDatos">
-    <input class="orden" type="button" value="Estadistica" id="btnEstadistica">
+    <header>
+        <h1>Sitio para Carreras</h1>
+        <img id="imagen"  src="img/corredores.jpeg" alt="corredoresde uruguay">
+        <input type="button" value="Datos" id="btnDatos">
+        <input type="button" value="Estadistica" id="btnEstadistica">
+    </header>
     <section id="idDatos" style="display:block">
         <h3>Datos</h3>
         <article>
@@ -48,8 +50,6 @@
             <label for="idCupo">Cupo:</label>
             <input class="orden" type="number" name="cupos" id="idCupo" value="30" min="1" max="1000" required>
             <input class="orden" type="button" value="Agregar Carrera" id="btnAgregarCarrera">
-            <!--<h4>LISTA DE CARRERAS</h4>
-            <ul id="idListaCarreras"></ul>-->
             </form>
         </article>
 
@@ -120,7 +120,7 @@
                     <h4>Datos generales</h4>
                     <form action="#">
                     <p>Promedios de inscriptos por carrera: <span id="idPromedioPorCarrera">sin datos</span></p>
-                    <p>Carrera/s con mas inscriptos:</p>
+                    <p>Carrera/s con más inscriptos:</p>
                     <ul id="idListaMasInscriptos">
                         <li>sin datos</li>
                     </ul>

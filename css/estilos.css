@@ -21,6 +21,7 @@ h1 {
     border-radius: 10px;
     padding: 20px;
 }
+
 #btnPatrocinador{
     width: 15%;
 }
@@ -56,4 +57,11 @@ footer{
     padding: 20px;
     text-align: center;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
 
