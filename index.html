@@ -81,7 +81,7 @@
             <h4>Corredores</h4>
             <form action="#" id="idFormCorredores">
             <label for="idNombreCorredor">Nombre:</label>
-            <input class="orden" type="text" name="corredor" id="idNombreCorredor">
+            <input class="orden" type="text" name="corredor" id="idNombreCorredor" required>
             <label for="idEdadCorredor">Edad:</label>
             <input class="orden" type="number" name="edad" id="idEdadCorredor" min="18" max="100" required>
             <label for="idCedula">Cédula:</label>
@@ -104,11 +104,11 @@
             <form action="#" id="idFormInscripciones">
             <label for="idCorredoresInscripcion">Corredores</label>
             <select class="orden" name="corredores" id="idCorredoresInscripcion" required>
-
+                <option value="" disabled selected>Seleccione un corredor</option>
             </select>
             <label for="idCarrerasInscripcion">Carreras</label>
             <select class="orden" name="carrerasinsc" id="idCarrerasInscripcion" required>
-
+                <option value="" disabled selected>Seleccione una carrera</option>
             </select>
             <input class="orden" type="button" value="Inscribir" id="btnInscribir">
             </form>
